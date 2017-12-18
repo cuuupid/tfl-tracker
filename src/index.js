@@ -55,6 +55,37 @@ Vue.component('line-choice', {
   }
 })
 
+Vue.component('result-wrapper', {
+  template: '#result',
+  props: ['result', 'station', 'line', 'lineColor'],
+  created: function () {
+    let r = new XMLHttpRequest();
+    let url = 'http://cloud.tfl.gov.uk/TrackerNet/PredictionDetailed/C/BNK'
+    url = url + App.lineCode + '/' + App.station.info.code
+    r.open('GET', url, false)
+    r.send()
+    let x = r.responseXML
+    let platforms = x.getElementsByTagName('S')[0].getElementsByTagName('P')
+    let res = []
+    for (let platform of platforms) {
+      let trains = []
+      for (let train of platform.getElementsByTagName('T'))
+        trains.push({
+          location: train.getAttribute('Location'),
+          destination: train.getAttribute('Destination'),
+          timeTo: train.getAttribute('SecondsTo')
+        })
+      res.push({
+        'name': platform.getAttribute('N'),
+        'trains': trains
+      })
+    }
+    App.result = res
+
+  }
+})
+
+
 var App = new Vue({
   el: '#app',
   data: function() {

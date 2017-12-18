@@ -85,6 +85,7 @@ Vue.component('result-wrapper', {
   }
 })
 
+
 var App = new Vue({
   el: '#app',
   data: function() {
