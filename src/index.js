@@ -16,7 +16,7 @@ Vue.component('station-search', {
       for (let station_info of App.stations) { // hijack station list from App
         if (this.stations.length == topk) break;
         if (station_info.name.toLowerCase().indexOf(this.q.toLowerCase()) > -1)
-          this.stations.push(station_info)
+          this.stations.push(station_info)  
       }
     }
   }
@@ -60,7 +60,7 @@ Vue.component('result-wrapper', {
   props: ['result', 'station', 'line', 'lineColor'],
   created: function () {
     let r = new XMLHttpRequest();
-    let url = 'http://cloud.tfl.gov.uk/TrackerNet/PredictionDetailed/C/BNK'
+    let url = 'http://localhost:8080/'
     url = url + App.lineCode + '/' + App.station.info.code
     r.open('GET', url, false)
     r.send()
@@ -84,7 +84,6 @@ Vue.component('result-wrapper', {
 
   }
 })
-
 
 Vue.component('result-platform', {
   template: '#result-platform',
@@ -114,11 +113,9 @@ Vue.component('result-train', {
   }
 })
 
-
-
 var App = new Vue({
   el: '#app',
-  data: function() {
+  data: function () {
     return {
       stations: {},
       station: {},
@@ -128,7 +125,8 @@ var App = new Vue({
       searchingStation: true,
       searchingLines: false,
       displayingResult: false,
-      result: {}
+      result: {},
+      console: window.console
     }
   },
   methods: {
@@ -136,7 +134,9 @@ var App = new Vue({
       this.$forceUpdate()
     }
   },
-  created: function() {
-    $.getJSON(datasource, (json) => { this.stations = json })
+  created: function () {
+    $.getJSON(datasource, (json) => {
+      this.stations = json
+    })
   }
 })
