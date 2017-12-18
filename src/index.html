@@ -14,15 +14,19 @@
     <body>
         <div class="container">
             <div id="app" class="text-center">
-                <h1>TFL Tracker</h1>
+                <h1 class="bg-info">TFL Tracker</h1>
                 <station-search
                     v-if="searchingStation == true"></station-search>
                 <line-chooser
                     v-if="(searchingLines == true)"
                     :lines="station.info.lines"></line-chooser>
+                <result-wrapper v-if="(displayingResult == true)"
+                    :result="result"
+                    :station="station.name"
+                    :line="line"
+                    :line-color="lineColor"></result-wrapper>
             </div>
         </div>
-
         
         <script type="text/x-template" id="station-search">
             <div>                
@@ -57,7 +61,6 @@
             </tr>
         </script>
 
-        
         <script type="text/x-template" id="line-chooser">
             <div>
                 <h3 class="search">Choose a Line</h3>
@@ -86,7 +89,7 @@
 
         <script type="text/x-template" id="result">
             <div>
-                <h2>
+                <h2 :style="{ backgroundColor: lineColor, color: 'white'}">
                     {{ station }}<br /><br />{{ line }} Line
                 </h2>
                 <div>
@@ -98,7 +101,7 @@
 
         <script type="text/x-template" id="result-platform">
             <div>
-                <h3>{{ platform.name }}</h3>
+                <h3 class="bg-warning">{{ platform.name }}</h3>
                 <p style="margin-top: 15px;" v-if="(platform.trains.length == 0)">
                     No trains are scheduled to arrive.
                 </p>
@@ -123,11 +126,10 @@
                 <td>{{ at }}</td>
                 <td>{{ dest }}</b>
             </div>
-        </script>        
+        </script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://unpkg.com/vue@2.3.3"></script>
         <script src="index.js"></script>
-
     </body>
 </html>
