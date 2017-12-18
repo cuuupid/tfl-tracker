@@ -84,7 +84,46 @@
             </tr>
         </script>
 
-        
+        <script type="text/x-template" id="result">
+            <div>
+                <h2>
+                    {{ station }}<br /><br />{{ line }} Line
+                </h2>
+                <div>
+                    <result-platform v-for="platform in result"
+                        :platform="platform"></result-platform>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/x-template" id="result-platform">
+            <div>
+                <h3>{{ platform.name }}</h3>
+                <p style="margin-top: 15px;" v-if="(platform.trains.length == 0)">
+                    No trains are scheduled to arrive.
+                </p>
+                <table class="table">
+                    <thead v-if="(platform.trains.length != 0)">
+                        <th class="text-center">ETA</th>
+                        <th class="text-center">Current Location</th>
+                        <th class="text-center">Final Destination</th>
+                    </thead>
+                    <tbody>
+                        <result-train :train="platform.trains.pop()"></result-train>
+                        <result-train v-for="train in platform.trains"
+                            :train="train"></result-train>
+                    </tbody>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/x-template" id="result-train">
+            <tr>
+                <td>{{ eta }}</td>
+                <td>{{ at }}</td>
+                <td>{{ dest }}</b>
+            </div>
+        </script>        
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://unpkg.com/vue@2.3.3"></script>
