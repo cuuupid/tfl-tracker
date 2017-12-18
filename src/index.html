@@ -28,8 +28,8 @@
                 </div>
                 <table class="table table-hover">
                     <thead>
-                        <th class="">Station Name</th>
-                        <th class="">Lines Supported</th>
+                        <th class="text-center">Station Name</th>
+                        <th class="text-center">Lines Supported</th>
                     </thead>
                     <tbody>
                     <station-result
@@ -44,7 +44,7 @@
             <tr v-on:click="pickStation" class="station-result">
                 <td>{{ station.name }}</p>
                 <td>
-                    <kbd
+                    <kbd style="margin-right: 5px;"
                         v-for="l in station.info.lines">
                         {{ l.line }} ({{ l.code }})
                     </kbd>
