@@ -54,6 +54,7 @@ App Loads
 - Using Bootstrap 3 for quick UI
 - TFL API provides data
 - Using Express for proxy server
+- Using Vue script-based approach
 
 ## Quick Spec
 
