@@ -22,6 +22,19 @@ Vue.component('station-search', {
   }
 })
 
+Vue.component('station-result', {
+  template: '#station-result',
+  props: ['station'],
+  methods: {
+    pickStation: function () {
+      App.station = this.station
+      App.searchingStation = false
+      App.searchingLines = true
+      App.update()
+    }
+  }
+})
+
 var App = new Vue({
   el: '#app',
   data: function() {
