@@ -1,20 +1,30 @@
 B
 Bakerloo
+brown
 C
 Central
+red
 D
 District
+green
 H
 Hammersmith & Circle
+yellow
 J
 Jubilee
+gray
 M
 Metropolitan
+purple
 N
 Northern
+black
 P
 Piccadilly
+blue
 V
 Victoria
+lightblue
 W
 Waterloo & City
+pink
