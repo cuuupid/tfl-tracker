@@ -10,3 +10,14 @@ _stations = []
 
 for l in lines:
     _stations += [(c, s, l) for c, s in parse(l['code'], 2)]
+
+stations = dict()
+
+for code, station, line in _stations:
+    if station in stations:
+        stations[station]['lines'].append(line)
+    else:
+        stations[station] = {'code': code, 'lines': [line]}
+
+json.dump([{'name': s, 'info': i}
+           for s, i in stations.items()], open('data.json', 'w'))
