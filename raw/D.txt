@@ -1,0 +1,116 @@
+ACT
+Acton Town
+ALE
+Aldgate East
+BKG
+Barking
+BCT
+Barons Court
+BEC
+Becontree
+BLF
+Blackfriars
+BWR
+Bow Road
+BBB
+Bromley-by-Bow
+CST
+Cannon Street
+CHP
+Chiswick Park
+DGE
+Dagenham East
+DGH
+Dagenham Heathway
+EBY
+Ealing Broadway
+ECM
+Ealing Common
+ECT
+Earl’s Court
+EHM
+East Ham
+EPY
+East Putney
+ERD
+Edgware Road (H & C)
+EPK
+Elm Park
+EMB
+Embankment
+FBY
+Fulham Broadway
+GRD
+Gloucester Road
+GUN
+Gunnersbury
+HMD
+Hammersmith
+HST
+High Street Kensington
+HCH
+Hornchurch
+OLY
+Kensington (Olympia)
+KEW
+Kew Gardens
+MAN
+Mansion House
+MLE
+Mile End
+MON
+Monument
+OLY
+Olympia
+PGR
+Parsons Green
+PLW
+Plaistow
+PUT
+Putney Bridge
+RCP
+Ravenscourt Park
+RMD
+Richmond
+SSQ
+Sloane Square
+SKN
+South Kensington
+SFS
+Southfields
+SJP
+St. James's Park
+STB
+Stamford Brook
+STG
+Stepney Green
+TEM
+Temple
+THL
+Tower Hill
+TGR
+Turnham Green
+UPM
+Upminster
+UPB
+Upminster Bridge
+UPY
+Upney
+UPK
+Upton Park
+VIC
+Victoria
+WBT
+West Brompton
+WHM
+West Ham
+WKN
+West Kensington
+WMS
+Westminster
+WCL
+Whitechapel
+WDN
+Wimbledon
+WMP
+Wimbledon Park

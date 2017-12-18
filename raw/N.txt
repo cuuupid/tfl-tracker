@@ -1,0 +1,100 @@
+ANG
+Angel
+ARC
+Archway
+BAL
+Balham
+BNK
+Bank
+BPK
+Belsize Park
+BOR
+Borough
+BTX
+Brent Cross
+BUR
+Burnt Oak
+CTN
+Camden Town
+CHF
+Chalk Farm
+CHX
+Charing Cross
+CPC
+Clapham Common
+CPN
+Clapham North
+CPS
+Clapham South
+COL
+Colindale
+CLW
+Colliers Wood
+EFY
+East Finchley
+EDG
+Edgware
+ELE
+Elephant and Castle
+EMB
+Embankment
+EUS
+Euston
+FYC
+Finchley Central
+GGR
+Golders Green
+GST
+Goodge Street
+HMP
+Hampstead
+HND
+Hendon Central
+HBT
+High Barnet
+HIG
+Highgate
+KEN
+Kennington
+KTN
+Kentish Town
+KXX
+King's Cross St Pancras
+LSQ
+Leicester Square
+LON
+London Bridge
+MHE
+Mill Hill East
+MGT
+Moorgate
+MOR
+Morden
+MCR
+Mornington Crescent
+OLD
+Old Street
+OVL
+Oval
+SWM
+South Wimbledon
+STK
+Stockwell
+TBE
+Tooting Bec
+TBY
+Tooting Broadway
+TCR
+Tottenham Court Road
+TOT
+Totteridge and Whetstone
+TPK
+Tufnell Park
+WST
+Warren Street
+WLO
+Waterloo
+WFY
+West Finchley
+WSP
+Woodside Park

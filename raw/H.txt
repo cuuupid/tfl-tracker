@@ -1,0 +1,74 @@
+ALD
+Aldgate
+ALE
+Aldgate East
+BST
+Baker Street
+BAR
+Barbican
+BKG
+Barking
+BLF
+Blackfriars
+BWR
+Bow Road
+BBB
+Bromley-by-Bow
+CST
+Cannon Street
+EHM
+East Ham
+ERD
+Edgware Road (H & C)
+EMB
+Embankment
+ESQ
+Euston Square
+FAR
+Farringdon
+GRD
+Gloucester Road
+GPS
+Great Portland Street
+HMS
+Hammersmith
+HST
+High Street Kensington
+KXX
+King's Cross St Pancras
+LST
+Liverpool Street
+MAN
+Mansion House
+MLE
+Mile End
+MON
+Monument
+MGT
+Moorgate
+PAD
+Paddington
+PLW
+Plaistow
+SSQ
+Sloane Square
+SKN
+South Kensington
+SJP
+St. James's Park
+STG
+Stepney Green
+TEM
+Temple
+THL
+Tower Hill
+UPK
+Upton Park
+VIC
+Victoria
+WHM
+West Ham
+WMS
+Westminster
+WCL
+Whitechapel
