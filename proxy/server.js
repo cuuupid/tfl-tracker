@@ -12,8 +12,10 @@ app.get('/:line/:station', (q, s) => {
     s.header('Access-Control-Allow-Credentials', true)
     s.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
     s.header('Access-Control-Allow-Headers', 'Content-Type')
-    s.header('Content-Type','text/xml')
+    s.header('Content-Type', 'text/xml')
     s.send(r.responseText)
 })
 
-app.listen(8080)
+app.listen(8080, () => {
+    console.log("Listening on port 8080")
+})
