@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TFL Tracker</title>
+
+        <!-- Latest compiled and minified CSS & JS -->
+        <link rel="stylesheet" media="screen" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <div class="container">
+            <div id="app" class="text-center">
+                <h1>TFL Tracker</h1>
+            </div>
+        </div>
+
+        
+        <script type="text/x-template" id="station-search">
+            <div>                
+                <div class="search">
+                    <input type="text" class="form-control"
+                        placeholder="Station (e.g. North Acton)"
+                        v-model="q" v-on:keyup="typeahead">
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <th class="text-center">Station Name</th>
+                        <th class="text-center">Lines Supported</th>
+                    </thead>
+                    <tbody>
+                    <station-result
+                        v-for="station in stations"
+                        :station="station"></station-result>
+                    </tbody>
+                </table>
+            </div>
+        </script>
+
+        <script type="text/x-template" id="station-result">
+            <tr v-on:click="pickStation" class="station-result">
+                <td>{{ station.name }}</p>
+                <td>
+                    <kbd style="margin-right: 5px;"
+                        v-for="l in station.info.lines">
+                        {{ l.line }} ({{ l.code }})
+                    </kbd>
+                </td>
+            </tr>
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/vue@2.3.3"></script>
+        <script src="index.js"></script>
+
+    </body>
+</html>
