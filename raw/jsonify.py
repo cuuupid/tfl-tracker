@@ -20,4 +20,4 @@ for code, station, line in _stations:
         stations[station] = {'code': code, 'lines': [line]}
 
 json.dump([{'name': s, 'info': i}
-           for s, i in stations.items()], open('data.json', 'w'))
+           for s, i in stations.items()], open('../src/data.json', 'w'))
