@@ -105,8 +105,8 @@ Vue.component('result-train', {
     this.at = this.train.location
     this.dest = this.train.destination
     let tt = this.train.timeTo
-    let hrs = Math.floor(tt % 3600)
-    let mins = Math.floor((this.train.timeTo - (hrs * 60)) % 60)
+    let hrs = Math.floor(tt / 3600)
+    let mins = Math.floor((this.train.timeTo - (hrs * 60)) / 60)
     let secs = Math.floor(this.train.timeTo - (hrs * 3600) - (mins * 60))
     this.eta = (hrs > 0 ? hrs + ' hours ' : '') +
       (mins > 0 ? mins + ' min ' : '') +
