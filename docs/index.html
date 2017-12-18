@@ -15,6 +15,11 @@
         <div class="container">
             <div id="app" class="text-center">
                 <h1>TFL Tracker</h1>
+                <station-search
+                    v-if="searchingStation == true"></station-search>
+                <line-chooser
+                    v-if="(searchingLines == true)"
+                    :lines="station.info.lines"></line-chooser>
             </div>
         </div>
 
@@ -51,6 +56,35 @@
                 </td>
             </tr>
         </script>
+
+        
+        <script type="text/x-template" id="line-chooser">
+            <div>
+                <h3 class="search">Choose a Line</h3>
+                <table class="table table-hover search">
+                    <thead>
+                        <th class="text-center">Line Name</th>
+                        <th class="text-center">Line Color</th>
+                    </thead>
+                    <tbody>
+                        <line-choice v-for="line in lines"
+                            :line-name="line.line"
+                            :line-code="line.code"
+                            :line-color="line.color"
+                            key="line.color"></line-choice>
+                    </tbody>
+                </table>
+            </div>
+        </script>
+
+        <script type="text/x-template" id="line-choice">
+            <tr v-on:click="choose">
+                <td>{{ lineName }} ({{ lineCode }})</td>
+                <td :style="{ width: 40+'px', backgroundColor: lineColor }"></td>
+            </tr>
+        </script>
+
+        
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://unpkg.com/vue@2.3.3"></script>
