@@ -86,6 +86,36 @@ Vue.component('result-wrapper', {
 })
 
 
+Vue.component('result-platform', {
+  template: '#result-platform',
+  props: ['platform']
+})
+
+Vue.component('result-train', {
+  template: '#result-train',
+  props: ['train'],
+  data: function () {
+    return {
+      at: '',
+      eta: '',
+      dest: ''
+    }
+  },
+  created: function () {
+    this.at = this.train.location
+    this.dest = this.train.destination
+    let tt = this.train.timeTo
+    let hrs = Math.floor(tt % 3600)
+    let mins = Math.floor((this.train.timeTo - (hrs * 60)) % 60)
+    let secs = Math.floor(this.train.timeTo - (hrs * 3600) - (mins * 60))
+    this.eta = (hrs > 0 ? hrs + ' hours ' : '') +
+      (mins > 0 ? mins + ' min ' : '') +
+      (secs > 0 ? secs + ' s' : '') + ((hrs + mins + secs) > 0 ? '' : 'here');
+  }
+})
+
+
+
 var App = new Vue({
   el: '#app',
   data: function() {
