@@ -55,7 +55,7 @@ App Loads
 - TFL API provides data
 - Using Express for proxy server
 - Using Vue script-based approach
-- Favicon from Flaticon, designed by Freepik ([source](https://www.flaticon.com/free-icon/underground_490922#term=london%20underground&page=1&position=8))
+- Favicon from Flaticon, designed by Freepik ([source image](https://www.flaticon.com/free-icon/underground_490922#term=london%20underground&page=1&position=8))
 
 ## Quick Spec
 
