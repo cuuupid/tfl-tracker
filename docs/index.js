@@ -35,13 +35,38 @@ Vue.component('station-result', {
   }
 })
 
+Vue.component('line-chooser', {
+  template: '#line-chooser',
+  props: ['lines']
+})
+
+Vue.component('line-choice', {
+  template: '#line-choice',
+  props: ['lineName', 'lineCode', 'lineColor'],
+  methods: {
+    choose: function () {
+      App.line = this.lineName
+      App.lineCode = this.lineCode
+      App.lineColor = this.lineColor
+      App.searchingLines = false
+      App.displayingResult = true
+      App.update()
+    }
+  }
+})
+
 var App = new Vue({
   el: '#app',
   data: function() {
     return {
       stations: {},
       station: {},
-      line: {},
+      line: '',
+      lineCode: '',
+      lineColor: '',
+      searchingStation: true,
+      searchingLines: false,
+      displayingResult: false,
       result: {}
     }
   },

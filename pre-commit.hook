@@ -5,3 +5,4 @@ cp src/index.html docs/index.html
 cp src/style.css docs/style.css
 cp src/index.js docs/index.js
 git add docs
+# useful on master branch for pubbing to gh pages
