@@ -11,12 +11,12 @@ Vue.component('station-search', {
   methods: {
     typeahead: function () {
       this.stations = []
-      if(this.q == '') return; // no res for blank queries
+      if (this.q == '') return; // no res for blank queries
       topk = 10 // load 10 results
       for (let station_info of App.stations) { // hijack station list from App
         if (this.stations.length == topk) break;
         if (station_info.name.toLowerCase().indexOf(this.q.toLowerCase()) > -1)
-          this.stations.push(station_info)  
+          this.stations.push(station_info)
       }
     }
   }
@@ -130,7 +130,7 @@ var App = new Vue({
     }
   },
   methods: {
-    update: function() {
+    update: function () {
       this.$forceUpdate()
     }
   },
