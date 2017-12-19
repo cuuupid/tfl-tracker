@@ -60,7 +60,7 @@ Vue.component('result-wrapper', {
   props: ['result', 'station', 'line', 'lineColor'],
   created: function () {
     let r = new XMLHttpRequest();
-    let url = 'https://tflapi.now.sh'
+    let url = 'https://tflapi.now.sh/'
     url = url + App.lineCode + '/' + App.station.info.code
     r.open('GET', url, false)
     r.send()
