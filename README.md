@@ -4,7 +4,7 @@
 
 - [NodeJS](https://nodejs.org') (prefer latest)
 - Express router (`npm install express`)
-- Node XMLHTTPRequest (`npm install node-xmlhttprequest`)
+- Node XMLHTTPRequest (`npm install xmlhttprequest`)
 
 ## Usage
 
